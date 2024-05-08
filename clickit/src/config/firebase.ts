@@ -9,14 +9,7 @@
 import { initializeApp } from 'firebase/app'
 import { getAuth } from 'firebase/auth'
 
-const FIREBASE_API_KEY              = "AIzaSyB_Utd6rMWhDKqxlYk_nN3QLdATIPXMllY"
-const FIREBASE_AUTH_DOMAIN          = "clickit-6d6ab.firebaseapp.com"
-const FIREBASE_DATABASE_URL         = "https://clickit-6d6ab-default-tdb.firebaseio.com"
-const FIREBASE_PROJECT_ID           = "clickit-6d6ab"
-const FIREBASE_STORAGE_BUCKET       = "clickit-6d6ab.appspot.com"
-const FIREBASE_MESSENGER_ID         = "542887559087"
-const FIREBASE_APP_ID               = "1:542887559087:web:b3912754d93bc2afd0b95a"
-const FIREBASE_MEASUREMENT_ID       = "G-62XQ0QSQ7Q" 
+
 
 const config = {
     apiKey: FIREBASE_API_KEY,
