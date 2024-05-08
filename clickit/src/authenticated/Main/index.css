@@ -1,0 +1,170 @@
+.addFavoriteItemContainer:hover .material-symbols-outlined,
+.addFavoriteItem:hover .material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 1,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24;
+}
+
+.text-balance {
+    text-wrap: balance;
+}
+
+hr.solid {
+    border-top: 1px solid gray;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 1px;
+}
+
+li {
+    list-style: none;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    margin: 0 20px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    column-rule: white;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    margin: 0 20px;
+}
+
+a.navPath:hover {
+    color: rgb(187, 122, 0);
+    cursor: pointer;
+}
+
+a.material-symbols-outlined {
+    padding: 10px;
+}
+
+a.material-symbols-outlined:hover {
+    background: lightgray;
+    border-radius: 100%;
+}
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 40px;
+}
+
+.checkout,
+.cart,
+.emptyCart,
+.addFavoriteItem,
+.addCartItem {
+    background: black;
+    border: white;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    width: 340px;
+    height: 60px;
+    border-radius: 50px;
+    margin: 10px;
+}
+
+.addFavoriteItem {
+    color: black;
+    border: 2px solid lightgray;
+    background: white;
+    padding-right: 10px;
+}
+
+.addCartItem:hover {
+    background: gray;
+    border-color: gray;
+    cursor: pointer;
+}
+
+.addFavoriteItem:hover {
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.addFavoriteItemContainer,
+.addCartItemContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    justify-content: center;
+}
+
+.addFavoriteItemContainer.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24;
+}
+
+.addFavoriteItemContainer.material-symbols-outlined:hover {
+    font-variation-settings:
+        'FILL' 1,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24;
+}
+
+.buttonStack {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkout,
+.cart,
+.emptyCart {
+    background: white;
+    color: gray;
+    border: 2px solid lightgray;
+}
+
+.checkout,
+.cart {
+    color: gray;
+}
+
+.checkout,
+.cart:hover {
+    border: 2px solid black;
+    color: black;
+    cursor: pointer;
+}
+
+.img {
+    width: 45%;
+    height: 45%;
+    border-radius: 10px;
+}
+
+.sizeChartItem {
+    font-size: 16px;
+    width: 180px;
+    height: 50px;
+    color: gray;
+    background-color: white;
+    border: 2px solid lightgray;
+    border-radius: 5px;
+}
+
+.sizeChartItem:hover {
+    color: black;
+    border: 2px solid black;
+    cursor: pointer;
+}

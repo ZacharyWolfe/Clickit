@@ -1,0 +1,327 @@
+{
+    "shoesDB": [
+        {
+            "_id": "1",
+            "name": "Vans Classic Slip-On True White",
+            "images": ["./app/assets/shoes/vans/ClassicSlip-onWhiteVans.png"],
+            "sizesAvailable": [
+                "M4, W4, M5, W5, M6, W6, M7, W7, M8, W8, M9, W9, M10, W10, M11, W11"
+            ],
+            "prices": ["50.00USD, 68.34CAD, 46.42EUR, 75.70AUD"],
+            "colorway": "True White",
+            "skuStringID": "c89572bf-ee90-4ab9-88b2-c6d4d77f68f4",
+            "gendersAvailable": ["Mens, Womens, Unisex"],
+            "brandName": "Vans",
+            "brandLogo": "./app/assets/logos/VansLogo.png",
+            "productId": "832662a5-3777-42d1-a2aa-565190f4c209",
+            "laces": false,
+            "condition": true
+        },
+        {
+            "_id": "2",
+            "name": "Nike Air Force 1 '07",
+            "images": ["./app/assets/shoes/Nike/NikeAirForce1'07.png"],
+            "sizesAvailable": [
+                "M4, W4, M5, W5, M6, W6, M7, W7, M8, W8, M9, W9, M10, W10, M11, W11"
+            ],
+            "prices": ["115.00USD, 156.94CAD, 106.64EUR, 173.80AUD"],
+            "colorway": "True White",
+            "skuStringID": "d2d38554-a2af-43a5-b7e0-43ec2e5b5972",
+            "gendersAvailable": ["Mens, Womens"],
+            "brandName": "Nike",
+            "brandLogo": "./app/assets/logos/NikeLogo.png",
+            "productId": "ed494bee-3137-4f62-8534-68556fd6cf30",
+            "laces": true,
+            "condition": true
+        },
+        {
+            "_id": "3",
+            "name": "Nike Dunk Low Retro",
+            "images": ["./app/assets/shoes/Nike/NikeDunkLowRetro.png"],
+            "sizesAvailable": [
+                "M4, W4, M5, W5, M6, W6, M7, W7, M8, W8, M9, W9, M10, W10, M11, W11"
+            ],
+            "prices": ["115.00USD, 156.94CAD, 106.64EUR, 173.80AUD"],
+            "colorway": "Black/White",
+            "skuStringID": "eafe05a3-36f4-44dd-9202-e657273bf9f0",
+            "gendersAvailable": ["Mens, Womens"],
+            "brandName": "Nike",
+            "brandLogo": "./app/assets/logos/NikeLogo.png",
+            "productId": "3e69d8d9-8a86-44c5-b4f7-9113633af35c",
+            "laces": true,
+            "condition": true
+        },
+        {
+            "_id": "4",
+            "name": "Adidas Falcon 3 Sport Lace Shoes",
+            "images": ["./app/assets/shoes/Adidas/AdidasFalcon3SportLace.png"],
+            "sizesAvailable": [
+                "M4, W4, M5, W5, M6, W6, M7, W7, M8, W8, M9, W9, M10, W10, M11, W11"
+            ],
+            "prices": ["55.00USD, 74.92CAD, 50.92EUR, 83.06AUD"],
+            "colorway": "Black/White",
+            "skuStringID": "002b5660-ae0c-4908-a82f-436ace0507d5",
+            "gendersAvailable": ["Mens, Womens"],
+            "brandName": "Adidas",
+            "brandLogo": "./app/assets/logos/AdidasLogo.png",
+            "productId": "e607c6d1-e3f7-45a1-b4d7-545fdcc1add5",
+            "laces": true,
+            "condition": true
+        },
+        {
+            "_id": "5",
+            "name": "Vans Classic Slip-On Checkerboard",
+            "images": [
+                "./app/assets/shoes/Vans/ClassicSlip-onCheckerboardVans.png"
+            ],
+            "sizesAvailable": [
+                "M4, W4, M5, W5, M6, W6, M7, W7, M8, W8, M9, W9, M10, W10, M11, W11"
+            ],
+            "prices": ["60.00USD, 81.81CAD, 55.71EUR, 90.84AUD"],
+            "colorway": "Black/Off White Checkerboard",
+            "skuStringID": "3f747d92-a245-4085-8b37-0816228fbac2",
+            "gendersAvailable": ["Mens, Womens, Unisex"],
+            "brandName": "Vans",
+            "brandLogo": "./app/assets/logos/VansLogo.png",
+            "productId": "99d67ac4-8fd4-4ab3-a084-59e24f88b3a1",
+            "laces": false,
+            "condition": true
+        },
+        {
+            "_id": "6",
+            "name": "Vans Sk8-Hi Canvas",
+            "images": ["./app/assets/shoes/Vans/Sk8-HiCanvasVans.png"],
+            "sizesAvailable": [
+                "M4, W4, M5, W5, M6, W6, M7, W7, M8, W8, M9, W9, M10, W10, M11, W11"
+            ],
+            "prices": ["75.00USD, 102.51CAD, 69.64EUR, 113.55AUD"],
+            "colorway": "True White",
+            "skuStringID": "e9eb4c07-d45f-408c-bf71-f1ba66cb3da2",
+            "gendersAvailable": ["Mens, Womens, Unisex"],
+            "brandName": "Vans",
+            "brandLogo": "./app/assets/logos/VansLogo.png",
+            "productId": "9063c792-8660-4fbb-bd36-d9b975e5139d",
+            "laces": true,
+            "condition": true
+        },
+        {
+            "_id": "7",
+            "name": "Adidas Gazelle Shoes",
+            "images": ["./app/assets/shoes/Adidas/adidasGazelle.png"],
+            "sizesAvailable": ["W4, W5, W6, W7, W8, W9, W10, W11"],
+            "prices": ["100.00USD, 136.68CAD, 92.84EUR, 151.40AUD"],
+            "colorway": "Core Black/White/Gold Metallic",
+            "skuStringID": "fbbcea1e-7105-4d71-a19a-fe1e2ad6d387",
+            "gendersAvailable": ["Womens"],
+            "brandName": "Adidas",
+            "brandLogo": "./app/assets/logos/AdidasLogo.png",
+            "productId": "752be416-d6cb-4937-88d0-062dc7b63dab",
+            "laces": true,
+            "condition": true
+        },
+        {
+            "_id": "8",
+            "name": "Gucci Signoria Slide Sandal",
+            "images": [
+                "./app/assets/shoes/Gucci/GucciSignoriaSlideSandalFrontView.png",
+                "./app/assets/shoes/Gucci/GucciSignoriaSlideSandalSideView.png"
+            ],
+            "sizesAvailable": ["W4, W5, W6, W7, W8, W9, W10, W11"],
+            "prices": ["990.00USD, 1349.46CAD, 917.58EUR, 1497.00AUD"],
+            "colorway": "White/Brown",
+            "skuStringID": "80485f3a-a022-4465-8551-ed3438986ce0",
+            "gendersAvailable": ["Womens"],
+            "brandName": "Gucci",
+            "brandLogo": "./app/assets/logos/GucciLogo.png",
+            "productId": "1385e3e1-969c-472a-8bfc-e882f02882e2",
+            "laces": false,
+            "condition": true
+        },
+        {
+            "_id": "9",
+            "name": "Gucci Jordaan Loafer",
+            "images": ["./app/assets/shoes/Gucci/GucciJordaanLoafer.png"],
+            "sizesAvailable": ["M4, M5, M6, M7, M8, M9, M10, M11"],
+            "prices": ["990.00USD, 1349.46CAD, 917.58EUR, 1497.00AUD"],
+            "colorway": "Light Blue Suede",
+            "skuStringID": "eca6ad58-c4da-4e5b-b92f-44fbf8bbcdc0",
+            "gendersAvailable": ["Mens"],
+            "brandName": "Gucci",
+            "brandLogo": "./app/assets/logos/GucciLogo.png",
+            "productId": "c769b55e-1161-4de4-8eb3-28021d87474a",
+            "laces": false,
+            "condition": true
+        },
+        {
+            "_id": "10",
+            "name": "Gucci Women's Summer Sandal With Double G",
+            "images": [
+                "./app/assets/shoes/Gucci/WomensSandalWithDoubleGFrontView.png",
+                "./app/assets/shoes/Gucci/WomensSandalWithDoubleGSideView.png"
+            ],
+            "sizesAvailable": ["W4, W5, W6, W7, W8, W9, W10, W11"],
+            "prices": ["990.00USD, 1349.46CAD, 917.58EUR, 1497.00AUD"],
+            "colorway": "Burnt Sienna/Beige",
+            "skuStringID": "013326b7-3b58-4049-901d-6c61422f0791",
+            "gendersAvailable": ["Womens"],
+            "brandName": "Gucci",
+            "brandLogo": "./app/assets/logos/GucciLogo.png",
+            "productId": "1d7f61a6-92aa-4a2a-97ed-c1fe55e80259",
+            "laces": false,
+            "condition": true
+        },
+        {
+            "_id": "11",
+            "name": "Classic Slip-On True White Classics Shoe",
+            "images": ["./app/assets/ClassicSlip-onWhiteVans.png"],
+            "sizesAvailable": [
+                "M4, W4, M5, W5, M6, W6, M7, W7, M8, W8, M9, W9, M10, W10, M11, W11"
+            ],
+            "prices": ["50.00USD, 68.34CAD, 46.42EUR, 75.70AUD"],
+            "colorway": "True White",
+            "skuStringID": "c89572bf-ee90-4ab9-88b2-c6d4d77f68f4",
+            "gendersAvailable": ["Mens, Womens, Unisex"],
+            "brandName": "Vans",
+            "brandLogo": "./app/assets/NikeLogo.png",
+            "productId": "832662a5-3777-42d1-a2aa-565190f4c209",
+            "laces": false,
+            "condition": true
+        },
+        {
+            "_id": "12",
+            "name": "Classic Slip-On True White Classics Shoe",
+            "images": ["./app/assets/ClassicSlip-onWhiteVans.png"],
+            "sizesAvailable": [
+                "M4, W4, M5, W5, M6, W6, M7, W7, M8, W8, M9, W9, M10, W10, M11, W11"
+            ],
+            "prices": ["50.00USD, 68.34CAD, 46.42EUR, 75.70AUD"],
+            "colorway": "True White",
+            "skuStringID": "c89572bf-ee90-4ab9-88b2-c6d4d77f68f4",
+            "gendersAvailable": ["Mens, Womens, Unisex"],
+            "brandName": "Vans",
+            "brandLogo": "./app/assets/NikeLogo.png",
+            "productId": "832662a5-3777-42d1-a2aa-565190f4c209",
+            "laces": false,
+            "condition": true
+        },
+        {
+            "_id": "13",
+            "name": "Classic Slip-On True White Classics Shoe",
+            "images": ["./app/assets/ClassicSlip-onWhiteVans.png"],
+            "sizesAvailable": [
+                "M4, W4, M5, W5, M6, W6, M7, W7, M8, W8, M9, W9, M10, W10, M11, W11"
+            ],
+            "prices": ["50.00USD, 68.34CAD, 46.42EUR, 75.70AUD"],
+            "colorway": "True White",
+            "skuStringID": "c89572bf-ee90-4ab9-88b2-c6d4d77f68f4",
+            "gendersAvailable": ["Mens, Womens, Unisex"],
+            "brandName": "Vans",
+            "brandLogo": "./app/assets/NikeLogo.png",
+            "productId": "832662a5-3777-42d1-a2aa-565190f4c209",
+            "laces": false,
+            "condition": true
+        },
+        {
+            "_id": "14",
+            "name": "Classic Slip-On True White Classics Shoe",
+            "images": ["./app/assets/ClassicSlip-onWhiteVans.png"],
+            "sizesAvailable": [
+                "M4, W4, M5, W5, M6, W6, M7, W7, M8, W8, M9, W9, M10, W10, M11, W11"
+            ],
+            "prices": ["50.00USD, 68.34CAD, 46.42EUR, 75.70AUD"],
+            "colorway": "True White",
+            "skuStringID": "c89572bf-ee90-4ab9-88b2-c6d4d77f68f4",
+            "gendersAvailable": ["Mens, Womens, Unisex"],
+            "brandName": "Vans",
+            "brandLogo": "./app/assets/NikeLogo.png",
+            "productId": "832662a5-3777-42d1-a2aa-565190f4c209",
+            "laces": false,
+            "condition": true
+        },
+        {
+            "_id": "15",
+            "name": "Classic Slip-On True White Classics Shoe",
+            "images": ["./app/assets/ClassicSlip-onWhiteVans.png"],
+            "sizesAvailable": [
+                "M4, W4, M5, W5, M6, W6, M7, W7, M8, W8, M9, W9, M10, W10, M11, W11"
+            ],
+            "prices": ["50.00USD, 68.34CAD, 46.42EUR, 75.70AUD"],
+            "colorway": "True White",
+            "skuStringID": "c89572bf-ee90-4ab9-88b2-c6d4d77f68f4",
+            "gendersAvailable": ["Mens, Womens, Unisex"],
+            "brandName": "Vans",
+            "brandLogo": "./app/assets/NikeLogo.png",
+            "productId": "832662a5-3777-42d1-a2aa-565190f4c209",
+            "laces": false,
+            "condition": true
+        },
+        {
+            "_id": "16",
+            "name": "Classic Slip-On True White Classics Shoe",
+            "images": ["./app/assets/ClassicSlip-onWhiteVans.png"],
+            "sizesAvailable": [
+                "M4, W4, M5, W5, M6, W6, M7, W7, M8, W8, M9, W9, M10, W10, M11, W11"
+            ],
+            "prices": ["50.00USD, 68.34CAD, 46.42EUR, 75.70AUD"],
+            "colorway": "True White",
+            "skuStringID": "c89572bf-ee90-4ab9-88b2-c6d4d77f68f4",
+            "gendersAvailable": ["Mens, Womens, Unisex"],
+            "brandName": "Vans",
+            "brandLogo": "./app/assets/NikeLogo.png",
+            "productId": "832662a5-3777-42d1-a2aa-565190f4c209",
+            "laces": false,
+            "condition": true
+        },
+        {
+            "_id": "17",
+            "name": "Classic Slip-On True White Classics Shoe",
+            "images": ["./app/assets/ClassicSlip-onWhiteVans.png"],
+            "sizesAvailable": [
+                "M4, W4, M5, W5, M6, W6, M7, W7, M8, W8, M9, W9, M10, W10, M11, W11"
+            ],
+            "prices": ["50.00USD, 68.34CAD, 46.42EUR, 75.70AUD"],
+            "colorway": "True White",
+            "skuStringID": "c89572bf-ee90-4ab9-88b2-c6d4d77f68f4",
+            "gendersAvailable": ["Mens, Womens, Unisex"],
+            "brandName": "Vans",
+            "brandLogo": "./app/assets/NikeLogo.png",
+            "productId": "832662a5-3777-42d1-a2aa-565190f4c209",
+            "laces": false,
+            "condition": true
+        },
+        {
+            "_id": "18",
+            "name": "Classic Slip-On True White Classics Shoe",
+            "images": ["./app/assets/ClassicSlip-onWhiteVans.png"],
+            "sizesAvailable": [
+                "M4, W4, M5, W5, M6, W6, M7, W7, M8, W8, M9, W9, M10, W10, M11, W11"
+            ],
+            "prices": ["50.00USD, 68.34CAD, 46.42EUR, 75.70AUD"],
+            "colorway": "True White",
+            "skuStringID": "c89572bf-ee90-4ab9-88b2-c6d4d77f68f4",
+            "gendersAvailable": ["Mens, Womens, Unisex"],
+            "brandName": "Vans",
+            "brandLogo": "./app/assets/NikeLogo.png",
+            "productId": "832662a5-3777-42d1-a2aa-565190f4c209",
+            "laces": false,
+            "condition": true
+        },
+        {
+            "_id": "19",
+            "name": "Falcon 3 Sport Lace Shoes",
+            "images": ["./app/assets/shoes/NikeFalcon3SportLace.png"],
+            "sizesAvailable": [
+                "M4, W4, M5, W5, M6, W6, M7, W7, M8, W8, M9, W9, M10, W10, M11, W11"
+            ],
+            "prices": ["55.00USD, 74.92CAD, 50.92EUR, 83.06AUD"],
+            "colorway": "Black/White",
+            "skuStringID": "c89572bf-ee90-4ab9-88b2-c6d4d77f68f4",
+            "gendersAvailable": ["Mens, Womens, Unisex"],
+            "brandName": "Adidas",
+            "brandLogo": "./app/assets/logos/AdidasLogo.png",
+            "productId": "832662a5-3777-42d1-a2aa-565190f4c209",
+            "laces": true,
+            "condition": false
+        }
+    ]
+}
