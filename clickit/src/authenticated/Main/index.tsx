@@ -3,7 +3,7 @@ import { useAppDispatch, useAppSelector } from '../../store'
 import { onAddItemToCart, onClearCart } from '../../actions/cart'
 import { Sku } from '../../reducers/cart'
 import './index.css'
-import clickitWhite from "../../assets/clickit/clickitWhite.png"
+import "../../assets/clickit/clickitWhite.png"
 
 const AuthenticatedMain = () => {
     const dispatch = useAppDispatch()
@@ -51,7 +51,7 @@ const AuthenticatedMain = () => {
                 href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
             />
             <div className="navbar">
-                <img width={300} height={300} src={clickitWhite}></img>
+                <img width={300} height={300} src={"../../assets/clickit/clickitWhite.png"} alt='product image'></img>
                 <ul className="links">
                     <li>
                         <a className="navPath" href="#">

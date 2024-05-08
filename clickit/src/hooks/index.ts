@@ -6,7 +6,6 @@ import { getCurrentUser } from '../authentication/firebase'
 const useHandleAuthState = () => {
     const dispatch = useAppDispatch()
     const [loaded, setLoaded] = useState(false)
-    const [firstTimeUser, setFirstTimeUser] = useState(true)
 
     useEffect(() => {
         // get current user on initial load if user is logged in
@@ -26,7 +25,6 @@ const useHandleAuthState = () => {
 
     return {
         loaded,
-        firstTimeUser,
     }
 }
 
