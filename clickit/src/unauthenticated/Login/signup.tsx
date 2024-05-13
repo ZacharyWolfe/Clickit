@@ -1,13 +1,15 @@
-import React from "react"
+import React from 'react'
 
 const signUp = () => {
-    return (<div>
-        {/* <input 
+    return (
+        <div>
+            {/* <input 
             type="text"
             placeholder="Email"
             onSubmit={handleEmailSubmit}
         /> */}
-    </div>)
+        </div>
+    )
 }
 
 export default signUp

@@ -4,6 +4,7 @@ import {
     createUserWithEmailAndPassword,
     signOut,
     sendPasswordResetEmail,
+    getAuth,
 } from 'firebase/auth'
 import { auth } from '../config/firebase'
 import { AppDispatch } from '../store'
@@ -15,67 +16,116 @@ import {
     SET_USER_REQUEST,
     SET_USER_SUCCESS,
     SET_USER_FAILURE,
-
+    
     CLEAR_USER_ERRORS,
 } from '../actions/user'
+import { authRequestWithDispatch } from '../actions/api'
+import { User } from '../reducers/user'
 
 export const getCurrentUser = () => {
-    return async (dispatch: AppDispatch) => {
-        dispatch({
-            type: GET_USER_REQUEST,
+    return (dispatch: AppDispatch) => {
+        return authRequestWithDispatch({
+            dispatch,
+            endpoint: 'get_current_user',
+            types: [GET_USER_REQUEST, GET_USER_SUCCESS, GET_USER_FAILURE],
         })
     }
 }
 
-export const signUpApp = (email: string, password: string) => {
+export const signUpApp = (
+    email: string,
+    password: string,
+) => {
     return async (dispatch: AppDispatch) => {
-        dispatch({
-            type: SET_USER_REQUEST,
+        dispatch({ 
+            type: SET_USER_REQUEST 
         })
         try {
-            const newUser = await createUserWithEmailAndPassword(
+            const userPromise = await createUserWithEmailAndPassword(
                 auth,
                 email,
                 password,
             )
-            await updateProfile(newUser.user, {
-                displayName: email,
+
+            const user = userPromise.user
+            const newUser: User = {
+                // PERSONAL INFO
+                firstName: "",
+                lastName: "",
+
+                // CONTACT INFO
+                email: email,
+                password: password,
+                phone: "",
+
+                // ADDRESS INFO
+                address: "",
+                city: "",
+                state: "",
+                country: "",
+                zipcode: "",
+
+                // USER INFO
+                totalSpent: 0,
+                numPurchases: 0,
+                purchases: [],
+
+                // MISC
+                id: user.uid,
+                onboarded: false,
+                userSince: (new Date().toISOString()),
+            }
+
+            console.log (newUser.userSince)
+
+            await updateProfile(
+                userPromise.user, 
+                { displayName: email }
+            )
+
+            dispatch ({
+                type: SET_USER_SUCCESS,
+                payload: user,
             })
-        } catch (error: any) {
-            console.error(error)
+        } catch (err: any) {
             dispatch({
                 type: SET_USER_FAILURE,
                 payload: {
-                    message: error.message,
+                    message: err.message,
                     status: 500,
                 },
             })
+            return
         }
-        return
+
+        return authRequestWithDispatch({
+            dispatch,
+            endpoint: 'createUser',
+            method: 'POST',
+            types: [SET_USER_REQUEST, SET_USER_SUCCESS, SET_USER_FAILURE],
+            data: {
+                email,
+                onboarded: false,
+            },
+        })
     }
 }
 
 export const signInApp = (email: string, password: string) => {
     return async (dispatch: AppDispatch) => {
-        dispatch({
-            type: GET_USER_REQUEST,
-        })
+        dispatch({ type: GET_USER_REQUEST })
         try {
-            const user = await signInWithEmailAndPassword(auth, email, password)
-            dispatch({
-                type: GET_USER_SUCCESS,
-                payload: user.user,
-            })
-        } catch (error: any) {
-            console.log(error)
+            await signInWithEmailAndPassword(auth, email, password)
+        } catch (err: any) {
             dispatch({
                 type: GET_USER_FAILURE,
                 payload: {
-                    message: error.message,
+                    message: err.message,
                     status: 500,
                 },
             })
         }
+        return
     }
 }
 

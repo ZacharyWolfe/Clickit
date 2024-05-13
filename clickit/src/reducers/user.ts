@@ -30,8 +30,8 @@ export type User = {
     purchases: Sku[]
 
     // MISC
-    id: number
-    userSince: Date
+    id: string
+    userSince: string
     onboarded: boolean
 }
 

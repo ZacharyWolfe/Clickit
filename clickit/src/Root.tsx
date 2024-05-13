@@ -11,6 +11,9 @@ const Root = () => {
     const loaded = useHandleAuthState()
     const user = useAppSelector((state) => state.user.user)
 
+    console.log(loaded)
+    console.log(user)
+
     return (
         <>
             {loaded ? (

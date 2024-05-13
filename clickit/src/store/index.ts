@@ -4,7 +4,7 @@ import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux'
 
 export const store = configureStore({
     reducer: reducers,
-    middleware(getDefaultMiddleware) {
+    middleware: (getDefaultMiddleware) => {
         return getDefaultMiddleware({
             serializableCheck: false,
         })
