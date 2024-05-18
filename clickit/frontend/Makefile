@@ -1,4 +1,3 @@
-
 .PHONY: run server v version
 
 run:
