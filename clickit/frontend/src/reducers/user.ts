@@ -29,6 +29,7 @@ export type User = {
     numPurchases: number
     cart: Map<Sku, number>
     purchases: Map<Sku[], number[]>
+    favorites: Sku[]
 
     // MISC
     id: string

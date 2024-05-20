@@ -3,12 +3,12 @@
     "short_name": "Clickit",
     "icons": [
         {
-            "src": "../assets/clickit/clickit192x192.png",
+            "src": "../src/assets/clickit/clickit192x192.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "../assets/clickit/clickit512x512.png",
+            "src": "../src/assets/clickit/clickit512x512.png",
             "sizes": "512x512",
             "type": "image/png"
         }

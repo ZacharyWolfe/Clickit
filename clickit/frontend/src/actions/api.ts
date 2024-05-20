@@ -32,17 +32,11 @@ export const requestWithDispatch = async ({
         })
 
         if (response.ok) {
-            console.log(`request success`)
             dispatch({ type: success, payload: await response.json() })
+            console.log(`request success`)
             return
         }
 
-        const errorData = await response.json()
-        console.log(`request failure: ${errorData.error}`)
-        dispatch({
-            type: failure,
-            payload: { message: errorData.error, status: response.status },
-        })
     } catch (err: any) {
         console.log(`request failure: ${err}`)
         dispatch({

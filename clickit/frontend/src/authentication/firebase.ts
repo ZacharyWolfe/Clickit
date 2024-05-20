@@ -69,17 +69,16 @@ export const signUpApp = (
                 // USER INFO
                 totalSpent: 0,
                 numPurchases: 0,
-                purchases: new Map<Sku[], number>(),
+                purchases: new Map<Sku[], number[]>(),
+                favorites: [],
 
                 // MISC
                 id: user.uid,
                 onboarded: false,
                 userSince: (new Date().toISOString()),
-                cart: new Map<Sku[], number>(),
+                cart: new Map<Sku, number>(),
                 photoURL: '',
             }
-
-            console.log (newUser.userSince)
 
             await updateProfile(
                 userPromise.user, 

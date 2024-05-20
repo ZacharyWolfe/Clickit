@@ -2,11 +2,13 @@ import React from 'react'
 import { useAppDispatch, useAppSelector } from '../../store'
 import { onAddItemToCart, onClearCart } from '../../actions/cart'
 import { Sku } from '../../reducers/cart'
-import './index.css'
 
 const AuthenticatedMain = () => {
     const dispatch = useAppDispatch()
     const cart = useAppSelector((state) => state.cart.items)
+    const user = useAppSelector((state) => state.user.user)
+
+    console.log(user)
 
     const sku: Sku = {
         id: '69420',
@@ -43,48 +45,73 @@ const AuthenticatedMain = () => {
     const onCheckoutClick = () => {}
 
     return (
-        <div>
+        <div className='outerdiv'>
             {/* eslint-disable-next-line */}
             <link
                 rel="stylesheet"
                 href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
             />
+            <div className='topnavbar'>
+                <div className='signIn' onClick={() => {}}>
+                    sign in
+                </div>
+                <div>
+                    |
+                </div>
+                <div className='signUp' onClick={() => {}}>
+                    sign up
+                </div>
+                <div>
+                    |
+                </div>
+                <div className='help' onClick={() => {}}>
+                    find a store
+                </div>
+            </div>
             <div className="navbar">
-                <img
-                    width={300}
-                    height={300}
-                    src={require('../../assets/clickit/clickitWhite.png')}
-                    alt="product image"
-                ></img>
+                <a className='logo' href='/'>
+                    <img
+                        src={require('../../assets/clickit/clickitWhite.png')}
+                        alt="clickit logo"
+                    ></img>
+                </a>
                 <ul className="links">
-                    <li>
+                    <li className="linksContainer">
                         <a className="navPath" href="#">
                             Clothing
                         </a>
+                        <a className={'material-symbols-outlined'} href='#'>
+                            {'apparel'}
+                        </a>
                     </li>
-                    <li>
+                    <li className="linksContainer">
                         <a className="navPath" href="#">
                             Shoes
                         </a>
-                    </li>
-                    <li>
-                        <div className="bagContainer">
-                            <a className={'material-symbols-outlined'} href="#">
-                                {'shopping_bag'}
-                            </a>
-                        </div>
-                    </li>
-                    <li>
-                        <a className="navPath" href="#">
-                            Profile
+                        <a className={'material-symbols-outlined'} href='#'>
+                            {'steps'}
                         </a>
                     </li>
+                    <li className="linksContainer">
+                        <a className='navPath'>
+                            Bag
+                        </a>
+                        <a className={'material-symbols-outlined'} href="#">
+                            {'shopping_bag'}
+                        </a>
+                    </li>
+                    <li className="linksContainer">
+                        <img className={'userPhoto'} src={user?.photoURL ? user.photoURL: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png"} alt='userPhoto'>
+                        </img>
+                    </li>
                 </ul>
+            </div>
+            <div className='bottomnavbar'>
             </div>
             <div className="buttonStack">
                 <button
                     className="addCartItem"
-                    onClick={() => dispatch(onAddItemToCart(sku))}
+                    onClick={() => {dispatch(onAddItemToCart(sku)); console.log(cart)}}
                 >
                     <div className="addCartItemContainer">
                         <div>Add to Bag</div>
@@ -99,10 +126,7 @@ const AuthenticatedMain = () => {
                             width={275}
                             height={300}
                             src={require(
-                                '../../assets/shoes' +
-                                    item.brandName +
-                                    '/' +
-                                    item.image,
+                                '../../assets/shoes/' + item.brandName + '/' + item.image,
                             )}
                             alt="Product Image"
                         ></img>

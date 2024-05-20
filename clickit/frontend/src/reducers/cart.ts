@@ -41,35 +41,38 @@ export default (
 ): shoppingCartState => {
     switch (action.type) {
         case ADD_CART_ITEM:
+            let mapQuantity = 1
+            if (state.items.has(action.payload as Sku)) {
+                mapQuantity += state.items.get(action.payload as Sku) ?? 0
+            }
             return {
                 ...state,
-                // items: new Map([
-                //     ...Array.from(state.items),
-                //     [
-                //         action.payload as Sku,
-                //         state.items.get(action.payload as Sku) ?? 0 + 1,
-                //     ],
-                // ]),
-                // runningTotalWithoutTax:
-                //     state.runningTotalWithoutTax +
-                //     (action.payload as Sku).price,
+                items: new Map([
+                    ...Array.from(state.items),
+                    [
+                        action.payload as Sku,
+                        mapQuantity,
+                    ],
+                ]),
+                runningTotalWithoutTax:
+                    state.runningTotalWithoutTax +
+                    (action.payload as Sku).price,
             }
-
         case REMOVE_CART_ITEM:
             return {
                 ...state,
-                // items: new Map([
-                //     ...Array.from(state.items),
-                //     [
-                //         action.payload as Sku,
-                //         state.items.get(action.payload as Sku) ?? 0 - 1,
-                //     ],
-                // ]),
-                // runningTotalWithoutTax:
-                //     state.runningTotalWithoutTax === 0
-                //         ? 0
-                //         : state.runningTotalWithoutTax -
-                //           (action.payload as Sku).price,
+                items: new Map([
+                    ...Array.from(state.items),
+                    [
+                        action.payload as Sku,
+                        state.items.get(action.payload as Sku) ?? 0 - 1,
+                    ],
+                ]),
+                runningTotalWithoutTax:
+                    state.runningTotalWithoutTax === 0
+                        ? 0
+                        : state.runningTotalWithoutTax -
+                          (action.payload as Sku).price,
             }
         case CLEAR_CART:
             return {
