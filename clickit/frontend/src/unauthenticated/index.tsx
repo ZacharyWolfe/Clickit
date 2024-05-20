@@ -7,9 +7,9 @@ const UnauthenticatedMain = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
-    const handleSubmitNewUser = () => {
+    const handleSubmitNewUser = async () => {
         console.log('handling signup')
-        dispatch(signUpApp(email, password))
+        await dispatch(signUpApp(email, password))
     }
 
     const handleSubmitExistingUser = () => {

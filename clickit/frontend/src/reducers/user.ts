@@ -1,5 +1,3 @@
-
-
 import * as user from '../actions/user'
 import { UnknownAction } from '@reduxjs/toolkit'
 import { Sku } from './cart'
@@ -29,8 +27,8 @@ export type User = {
     // USER INFO
     totalSpent: number
     numPurchases: number
-    cart: Map<Sku[], number>
-    purchases: Map<Sku[], number>
+    cart: Map<Sku, number>
+    purchases: Map<Sku[], number[]>
 
     // MISC
     id: string

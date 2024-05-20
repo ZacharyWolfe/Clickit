@@ -1,7 +1,7 @@
 import { auth } from '../config/firebase'
 import { AppDispatch } from '../store'
 
-const API_URL = "http://localhost:5000/clickit/us-central1/api"
+const API_URL = "http://localhost:5000/clickit-6d6ab/us-central1/api"
 
 type RequestWithDispatchParams = {
     dispatch: AppDispatch

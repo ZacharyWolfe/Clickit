@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.459c9a4e.css",
-    "main.js": "/static/js/main.4ec0527f.js",
+    "main.js": "/static/js/main.dfe9ca62.js",
     "static/media/ClassicSlip-onCheckerboardVans.png": "/static/media/ClassicSlip-onCheckerboardVans.515911e3647a55e0cfff.png",
     "static/media/ClassicSlip-onWhiteVans.png": "/static/media/ClassicSlip-onWhiteVans.18fb80f664c65a34b22f.png",
     "static/media/NikeAirForce1'07.png": "/static/media/NikeAirForce1'07.d1f46790f9843854187e.png",
@@ -18,10 +18,10 @@
     "static/media/clickitWhite.png": "/static/media/clickitWhite.eb7c032963c60d77db03.png",
     "index.html": "/index.html",
     "main.459c9a4e.css.map": "/static/css/main.459c9a4e.css.map",
-    "main.4ec0527f.js.map": "/static/js/main.4ec0527f.js.map"
+    "main.dfe9ca62.js.map": "/static/js/main.dfe9ca62.js.map"
   },
   "entrypoints": [
     "static/css/main.459c9a4e.css",
-    "static/js/main.4ec0527f.js"
+    "static/js/main.dfe9ca62.js"
   ]
 }

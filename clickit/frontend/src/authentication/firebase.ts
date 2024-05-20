@@ -21,6 +21,7 @@ import {
 } from '../actions/user'
 import { authRequestWithDispatch } from '../actions/api'
 import { User } from '../reducers/user'
+import { Sku } from '../reducers/cart'
 
 export const getCurrentUser = () => {
     return (dispatch: AppDispatch) => {
@@ -68,12 +69,14 @@ export const signUpApp = (
                 // USER INFO
                 totalSpent: 0,
                 numPurchases: 0,
-                purchases: [],
+                purchases: new Map<Sku[], number>(),
 
                 // MISC
                 id: user.uid,
                 onboarded: false,
                 userSince: (new Date().toISOString()),
+                cart: new Map<Sku[], number>(),
+                photoURL: '',
             }
 
             console.log (newUser.userSince)
@@ -82,11 +85,6 @@ export const signUpApp = (
                 userPromise.user, 
                 { displayName: email }
             )
-
-            dispatch ({
-                type: SET_USER_SUCCESS,
-                payload: user,
-            })
         } catch (err: any) {
             dispatch({
                 type: SET_USER_FAILURE,
@@ -100,7 +98,7 @@ export const signUpApp = (
 
         return authRequestWithDispatch({
             dispatch,
-            endpoint: 'createUser',
+            endpoint: 'create_user',
             method: 'POST',
             types: [SET_USER_REQUEST, SET_USER_SUCCESS, SET_USER_FAILURE],
             data: {

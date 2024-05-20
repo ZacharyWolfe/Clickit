@@ -6,14 +6,6 @@
  * @version  1.0
 */
 
-// import {
-//     FIREBASE_API_KEY,
-//     FIREBASE_APP_ID,
-//     FIREBASE_AUTH_DOMAIN,
-//     FIREBASE_MESSENGER_ID,
-//     FIREBASE_PROJECT_ID,
-//     FIREBASE_STORAGE_BUCKET
-// } from '@env'
 import { initializeApp } from 'firebase/app'
 import { 
     getAuth,
@@ -23,12 +15,12 @@ import {
 import { getFirestore } from 'firebase/firestore'
 
 const config = {
-    apiKey: FIREBASE_API_KEY,
-    authDomain: FIREBASE_AUTH_DOMAIN,
-    projectId: FIREBASE_PROJECT_ID,
-    storageBucket: FIREBASE_STORAGE_BUCKET,
-    messagingSenderId: FIREBASE_MESSENGER_ID,
-    appId: FIREBASE_APP_ID,
+    apiKey:             process.env.REACT_APP_FIREBASE_API_KEY,
+    authDomain:         process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+    projectId:          process.env.REACT_APP_FIREBASE_PROJECT_ID,
+    storageBucket:      process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId:  process.env.REACT_APP_FIREBASE_MESSENGER_ID,
+    appId:              process.env.REACT_APP_FIREBASE_APP_ID,
 }
 
 // Initialize Firebase

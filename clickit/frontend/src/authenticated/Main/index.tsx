@@ -90,17 +90,6 @@ const AuthenticatedMain = () => {
                         <div>Add to Bag</div>
                     </div>
                 </button>
-                <button
-                    className="addFavoriteItem"
-                    onClick={() => dispatch(onAddItemToCart(sku))}
-                >
-                    <div className="addFavoriteItemContainer">
-                        <div>Favorite</div>
-                        <div className={'material-symbols-outlined'}>
-                            {'favorite'}
-                        </div>
-                    </div>
-                </button>
             </div>
             {cart.entries &&
                 Array.from(cart.entries()).map(([item, quantity]) => (
