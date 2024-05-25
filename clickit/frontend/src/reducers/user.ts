@@ -2,6 +2,7 @@ import * as user from '../actions/user'
 import { UnknownAction } from '@reduxjs/toolkit'
 import { Sku } from './cart'
 
+// What a user is
 export type User = {
     // PERSONAL INFO
     firstName: string
@@ -30,6 +31,7 @@ export type User = {
     cart: Map<Sku, number>
     purchases: Map<Sku[], number[]>
     favorites: Sku[]
+    coupons: string[]
 
     // MISC
     id: string
@@ -38,18 +40,21 @@ export type User = {
     photoURL: string
 }
 
+// State that a user carries
 export type UserState = {
     user?: User
     loading: boolean
     error?: Error
 }
 
+// The initial state for a user
 const InitialState: UserState = {
     user: undefined,
     error: undefined,
     loading: false,
 }
 
+// The user reducer
 export default (state = InitialState, action: UnknownAction): UserState => {
     switch (action.type) {
         case user.GET_USER_REQUEST:

@@ -1,9 +1,9 @@
 import { Sku } from '../reducers/cart'
 import { AppDispatch } from '../store'
 
-export const ADD_CART_ITEM = '@@cart/cartItemAdded'
-export const REMOVE_CART_ITEM = '@@cart/cartItemRemoved'
-export const CLEAR_CART = '@@cart/cartCleared'
+export const ADD_CART_ITEM      = '@@cart/cartItemAdded'
+export const REMOVE_CART_ITEM   = '@@cart/cartItemRemoved'
+export const CLEAR_CART         = '@@cart/cartCleared'
 export const PROMO_CODE_APPLIED = '@@cart/promoCodeApplied'
 
 export const onAddItemToCart = (sku: Sku) => {
@@ -36,10 +36,19 @@ export const onClearCart = () => {
     }
 }
 
-export const onApplyPromoCode = () => {
+export const onApplyPromoCode = (promo: string) => {
     return async (dispatch: AppDispatch) => {
         dispatch({
             type: PROMO_CODE_APPLIED,
+            payload: promo,
+        })
+    }
+}
+
+export const onCheckoutClick = () => {
+    return async (dispatch: AppDispatch) => {
+        dispatch({
+            type: CLEAR_CART,
         })
     }
 }

@@ -6,17 +6,72 @@
 .addFavoriteItem:hover .material-symbols-outlined {
     font-variation-settings:
         'FILL' 1,
-        'wght' 400,
+        'wght' 500,
         'GRAD' 0,
         'opsz' 24;
 }
 
-.signIn:hover,
-.signUp:hover,
-.help:hover,
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 350,
+        'GRAD' 0,
+        'opsz' 24;
+}
+
+.couponMember,
+.couponPercentage,
+.coupon {
+    color: white;
+    font-family:'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif ;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.couponContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    text-wrap: nowrap;
+    gap: 3px;
+}
+
+.couponPercentage {
+    color: hotpink;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 20px;
+    padding-inline: 5px;
+}
+
+.couponMember {
+    text-underline-offset: 3px;
+    text-decoration: underline;
+}
+
+.topNavbarSnackContainer {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: right;
+    width: 25%;
+    padding-right: 20px;
+}
+
+.topNavbarSnack{ 
+    font-size: 12px;
+    text-wrap: nowrap;
+    font-weight: 300;
+    color: white
+}
+
+.topNavbarSnack:hover,
 .navPath:hover{
     cursor: pointer;
-    color: rgb(140, 140, 140);
+    color: lightgray;
 }
 
 li {
@@ -31,18 +86,16 @@ li {
     margin: 0 20px;
 }
 
-a {
+.linksContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     color: black;
     text-decoration: none;
     column-rule: white;
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 500;
-}
-.linksContainer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
 }
 
 .checkout,
@@ -92,7 +145,7 @@ a {
 .addFavoriteItemContainer.material-symbols-outlined {
     font-variation-settings:
         'FILL' 0,
-        'wght' 400,
+        'wght' 500,
         'GRAD' 0,
         'opsz' 24;
 }
@@ -100,7 +153,7 @@ a {
 .addFavoriteItemContainer.material-symbols-outlined:hover {
     font-variation-settings:
         'FILL' 1,
-        'wght' 400,
+        'wght' 500,
         'GRAD' 0,
         'opsz' 24;
 }
@@ -130,6 +183,10 @@ a {
     cursor: pointer;
 }
 
+.emptyCart:hover {
+    cursor: default;
+}
+
 .img {
     width: 35%;
     height: 35%;
@@ -154,17 +211,16 @@ a {
 
 .bottomnavbar,
 .topnavbar {
-    align-items: center;
     display: flex;
-    height: 30px;
-    background: rgb(240, 240, 240);
-    padding: 0px;
-    margin: 0;
+    height: 40px;
     justify-content: right;
-    font-size: 12px;
-    font-weight: 300;
-    gap: 15px;
-    padding-right: 20px;
+    background: black;
+}
+
+.bottomnavbar {
+    height: 1px;
+    width: 100%;
+    background: gray;
 }
 
 .navbar {
@@ -174,6 +230,24 @@ a {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+
+.navbarSnackContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbarSnack {
+    font-size: 16px;
+    font-weight: 300;
+    color: black;
+}
+
+.navbarSnack:hover {
+    cursor: pointer;
+    color: lightgray;
 }
 
 .outerdiv {
@@ -192,8 +266,35 @@ a {
 }
 
 .logo {
-    width: 180px;
-    height: 60px;
-    align-content: center;
-    padding-left: 20px;
+    width: 120px;
+    height: 120px;
+    margin: 0 60px;
+}
+
+.userFlow,
+.signupInput{
+    width: 300px;
+    height: 40px;
+    border: 2px solid lightgray;
+    border-radius: 30px;
+    margin-left: 20px;
+    padding-left: 10px;
+}
+.userFlowContainer {
+    display: flex;
+    justify-content: end;
+}
+
+.userFlowContainerItems {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    gap: 5px;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+    font-weight: bold;
 }

@@ -1,9 +1,8 @@
 import { auth } from '../config/firebase'
 import { AppDispatch } from '../store'
+import { GET_USER_FAILURE, GET_USER_REQUEST, GET_USER_SUCCESS } from './user'
 
-const API_URL = "http://localhost:5000/clickit-6d6ab/us-central1/api"
-
-type RequestWithDispatchParams = {
+type RequestWithDispatchParameters = {
     dispatch: AppDispatch
     endpoint: string
     method?: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE'
@@ -19,20 +18,24 @@ export const requestWithDispatch = async ({
     types,
     data,
     headers = { 'Content-Type': 'application/json' },
-}: RequestWithDispatchParams) => {
-    const [request, success, failure] = types
+}: RequestWithDispatchParameters) => {
+    const fetchURL = process.env.REACT_APP_API_URL
+    console.log(fetchURL)
 
     try {
         console.log(`starting request: ${endpoint}`)
-        dispatch({ type: request })
-        const response = await fetch(`${API_URL}/${endpoint}`, {
+        dispatch({ type: GET_USER_REQUEST })
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/${endpoint}`, {
             method,
             headers,
             ...(method !== 'GET' && data ? { body: JSON.stringify(data) } : {}),
         })
 
         if (response.ok) {
-            dispatch({ type: success, payload: await response.json() })
+            const responseJSON = await response.json()
+            dispatch({ type: GET_USER_SUCCESS, payload: responseJSON })
+            console.log("responseJSON: ")
+            console.log(responseJSON)
             console.log(`request success`)
             return
         }
@@ -40,7 +43,7 @@ export const requestWithDispatch = async ({
     } catch (err: any) {
         console.log(`request failure: ${err}`)
         dispatch({
-            type: failure,
+            type: GET_USER_FAILURE,
             payload: { message: err, status: 500 },
         })
     }
@@ -55,9 +58,9 @@ export const authRequestWithDispatch = async ({
     types,
     data,
     headers = { 'Content-Type': 'application/json' },
-}: RequestWithDispatchParams) => {
+}: RequestWithDispatchParameters) => {
     const userToken = await auth.currentUser?.getIdToken()
-
+    console.log(`userToken: ${userToken}`)
     const combinedHeaders = { ...headers, Authorization: `Bearer ${userToken}` }
     return requestWithDispatch({
         dispatch,

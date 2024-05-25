@@ -6,6 +6,7 @@ import {
     REMOVE_CART_ITEM,
 } from '../actions/cart'
 
+// What a SKU is
 export interface Sku {
     id: string
     name: string
@@ -22,17 +23,21 @@ export interface Sku {
     manufacturer?: string
 }
 
+// What state it has
 interface shoppingCartState {
     items: Map<Sku, number>
     tax: number
     runningTotalWithoutTax: number
 }
 
+// The initial state for a SKU
 const initialState: shoppingCartState = {
     items: new Map<Sku, number>(),
     tax: 0,
     runningTotalWithoutTax: 0,
 }
+
+// The SKU reducer
 
 /// eslint-disable-next-line
 export default (
@@ -95,16 +100,20 @@ export default (
 export function fetchPromoCodeDiscount(arg: string): number {
     const promoCodes = new Map<string, number>([
         ['10OFF', 10],
+        ['15OFF', 15],
         ['20OFF', 20],
+        ['25OFF', 25],
         ['30OFF', 30],
+        ['35OFF', 35],
         ['40OFF', 40],
+        ['45OFF', 45],
         ['50OFF', 50],
+        ['55OFF', 55],
         ['60OFF', 60],
         ['70OFF', 70],
         ['80OFF', 80],
         ['90OFF', 90],
         ['100OFF', 100],
-        ['110OFF', 110],
     ])
 
     if (arg in promoCodes) {

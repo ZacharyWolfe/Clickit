@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.459c9a4e.css",
-    "main.js": "/static/js/main.71ad3fe8.js",
+    "main.css": "/static/css/main.82ef1cc6.css",
+    "main.js": "/static/js/main.7f88b669.js",
     "static/media/ClassicSlip-onCheckerboardVans.png": "/static/media/ClassicSlip-onCheckerboardVans.515911e3647a55e0cfff.png",
     "static/media/ClassicSlip-onWhiteVans.png": "/static/media/ClassicSlip-onWhiteVans.18fb80f664c65a34b22f.png",
     "static/media/NikeAirForce1'07.png": "/static/media/NikeAirForce1'07.d1f46790f9843854187e.png",
@@ -15,13 +15,13 @@
     "static/media/adidasFalcon3SportLace.png": "/static/media/adidasFalcon3SportLace.4b2a4c633c638b90671b.png",
     "static/media/adidasGazelle.png": "/static/media/adidasGazelle.fe21d729b1aa852b9186.png",
     "static/media/Sk8-HiCanvasVans.png": "/static/media/Sk8-HiCanvasVans.b208fdce7d3275cfa0f1.png",
-    "static/media/clickitWhite.png": "/static/media/clickitWhite.eb7c032963c60d77db03.png",
+    "static/media/clickitWhite.png": "/static/media/clickitWhite.0ec25bd4c5af67e2c857.png",
     "index.html": "/index.html",
-    "main.459c9a4e.css.map": "/static/css/main.459c9a4e.css.map",
-    "main.71ad3fe8.js.map": "/static/js/main.71ad3fe8.js.map"
+    "main.82ef1cc6.css.map": "/static/css/main.82ef1cc6.css.map",
+    "main.7f88b669.js.map": "/static/js/main.7f88b669.js.map"
   },
   "entrypoints": [
-    "static/css/main.459c9a4e.css",
-    "static/js/main.71ad3fe8.js"
+    "static/css/main.82ef1cc6.css",
+    "static/js/main.7f88b669.js"
   ]
 }

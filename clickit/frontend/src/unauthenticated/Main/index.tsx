@@ -1,20 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { 
     useAppDispatch, 
     useAppSelector 
 } from '../../store'
-import { 
-    onAddItemToCart, 
-    onClearCart 
-} from '../../actions/cart'
+import { onAddItemToCart, onApplyPromoCode, onClearCart } from '../../actions/cart'
 import { Sku } from '../../reducers/cart'
 
-const AuthenticatedMain = () => {
+const UnauthenticatedMain = () => {
     const dispatch = useAppDispatch()
     const cart = useAppSelector((state) => state.cart.items)
-    const user = useAppSelector((state) => state.user.user)
-
-    console.log(user)
+    const handleMemberClick = () => {
+        onApplyPromoCode('15OFF')
+    }
 
     const sku: Sku = {
         id: '69420',
@@ -48,7 +45,7 @@ const AuthenticatedMain = () => {
         manufacturer: 'Nike',
     }
 
-    const onCheckoutClick = () => {}
+    
 
     return (
         <div className='outerdiv'>
@@ -58,17 +55,59 @@ const AuthenticatedMain = () => {
                 href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
             />
             <div className='topnavbar'>
-                <a className='help' href='/stores'>
-                    find a store
-                </a>
+                <div className='couponContainer'>
+                    <div className='coupon'>
+                        become a 
+                    </div>
+                    <a className='couponMember' href='/signup' onClick={handleMemberClick}>
+                        member  
+                    </a>
+                    <div className='coupon'>
+                        today and get
+                    </div>
+                    <div className='couponPercentage'>
+                        15% off
+                    </div>
+                    <div className='coupon'>
+                        your first order
+                    </div>
+                </div>
+                <div className='topNavbarSnackContainer'>
+                    <a className='topNavbarSnack' href='/signin'>
+                        sign in
+                    </a>
+                    <div className='topNavbarSnack'>
+                        |
+                    </div>
+                    <a className='topNavbarSnack' href='/signup'>
+                        sign up
+                    </a>
+                    <div className='topNavbarSnack'>
+                        |
+                    </div>
+                    <a className='topNavbarSnack' href='stores'>
+                        find a store
+                    </a>
+                </div>
             </div>
             <div className="navbar">
                 <a className='logo' href='/'>
                     <img
-                        src={require('../../../src/assets/clickit/clickitWhite.png')}
+                        src={require('../../assets/clickit/clickit512x512.png')}
                         alt="clickit logo"
                     ></img>
                 </a>
+                <div className='navbarSnackContainer'>
+                    <div className='navbarSnack'>
+                        Men's
+                    </div>
+                    <div className='navbarSnack'>
+                        Women's
+                    </div>
+                    <div className='navbarSnack'>
+                        Unisex
+                    </div>
+                </div>
                 <ul className="links">
                     <li className="linksContainer">
                         <a className="navPath" href="#">
@@ -95,8 +134,6 @@ const AuthenticatedMain = () => {
                         </a>
                     </li>
                     <li className="linksContainer">
-                        <img className={'userPhoto'} src={user?.photoURL ? user.photoURL: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png"} alt='userPhoto'>
-                        </img>
                     </li>
                 </ul>
             </div>
@@ -150,4 +187,4 @@ const AuthenticatedMain = () => {
     )
 }
 
-export default AuthenticatedMain
+export default UnauthenticatedMain

@@ -1,10 +1,8 @@
 import {
-    updateProfile,
     signInWithEmailAndPassword,
     createUserWithEmailAndPassword,
     signOut,
     sendPasswordResetEmail,
-    getAuth,
 } from 'firebase/auth'
 import { auth } from '../config/firebase'
 import { AppDispatch } from '../store'
@@ -20,8 +18,6 @@ import {
     CLEAR_USER_ERRORS,
 } from '../actions/user'
 import { authRequestWithDispatch } from '../actions/api'
-import { User } from '../reducers/user'
-import { Sku } from '../reducers/cart'
 
 export const getCurrentUser = () => {
     return (dispatch: AppDispatch) => {
@@ -39,7 +35,7 @@ export const signUpApp = (
 ) => {
     return async (dispatch: AppDispatch) => {
         dispatch({ 
-            type: SET_USER_REQUEST 
+            type: SET_USER_REQUEST
         })
         try {
             const userPromise = await createUserWithEmailAndPassword(
@@ -48,42 +44,10 @@ export const signUpApp = (
                 password,
             )
 
-            const user = userPromise.user
-            const newUser: User = {
-                // PERSONAL INFO
-                firstName: "",
-                lastName: "",
-
-                // CONTACT INFO
-                email: email,
-                password: password,
-                phone: "",
-
-                // ADDRESS INFO
-                address: "",
-                city: "",
-                state: "",
-                country: "",
-                zipcode: "",
-
-                // USER INFO
-                totalSpent: 0,
-                numPurchases: 0,
-                purchases: new Map<Sku[], number[]>(),
-                favorites: [],
-
-                // MISC
-                id: user.uid,
-                onboarded: false,
-                userSince: (new Date().toISOString()),
-                cart: new Map<Sku, number>(),
-                photoURL: '',
-            }
-
-            await updateProfile(
-                userPromise.user, 
-                { displayName: email }
-            )
+            // await updateProfile(
+            //     userPromise.user, 
+            //     { displayName: email }
+            // )
         } catch (err: any) {
             dispatch({
                 type: SET_USER_FAILURE,
@@ -102,18 +66,31 @@ export const signUpApp = (
             types: [SET_USER_REQUEST, SET_USER_SUCCESS, SET_USER_FAILURE],
             data: {
                 email,
+                password,
                 onboarded: false,
             },
         })
     }
 }
 
-export const signInApp = (email: string, password: string) => {
+export const signInApp = (
+    email: string, 
+    password: string
+) => {
     return async (dispatch: AppDispatch) => {
         dispatch({ type: GET_USER_REQUEST })
         try {
-            await signInWithEmailAndPassword(auth, email, password)
+            const userCredential = await signInWithEmailAndPassword(auth, email, password)
+            console.log("user: ")
+            console.log(userCredential.user)
+
+            await authRequestWithDispatch({
+                dispatch,
+                endpoint: 'get_current_user',
+                types: [GET_USER_REQUEST, GET_USER_SUCCESS, GET_USER_FAILURE],
+            })
         } catch (err: any) {
+            console.log("failed")
             dispatch({
                 type: GET_USER_FAILURE,
                 payload: {
